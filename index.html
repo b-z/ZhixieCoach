@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container">
+                <span class="brand-logo center">教练简介</span>
+                <ul id="nav-mobile" class="right">
+                    <!-- <li class="waves-effect waves-orange" id="panel_btn_activity"><a onclick="openPanel('activity');">活动介绍</a></li> -->
+                    <!-- <li class="waves-effect waves-teal" id="panel_btn_coach"><a onclick="openPanel('coach');">教练介绍</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav bar end -->
+    <!-- container -->
+    <main>
+        <div class="container">
+
+            <div class="section">
+                <div id="search">
+                    <div id="search_btn" class="fixed-action-btn" onclick="$('#search_btn').fadeOut(500);$('#search_area').fadeIn(500);">
+                        <a class="btn-floating btn-large">
+                            <!-- <i class="large material-icons">search</i> -->
+                            <img src='icon/search.png' width=55.5>
+                        </a>
+                    </div>
+                    <div id="search_area" class="row" style="display:none;">
+                        <div class="col s12 m8 l8 offset-m2 offset-l2">
+                            <form action="#">
+                                <div class="file-field input-field">
+                                    <div class="input-field col s9 left" style="margin-top:0;">
+                                        <input id="last_name" type="text" class="validate">
+                                        <label for="last_name">输入想要查询的内容</label>
+                                    </div>
+                                    <div id="search_confirm" class="btn waves-effect waves-light col s2 right btn-thin">
+                                        <!-- <i class="material-icons">search</i> -->
+                                        <img src='icon/search.png' height=42>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="back_btn" class="fixed-action-btn" style="display:none;" onclick="clickBack('coach');">
+                <a class="btn-floating btn-large">
+                    <img src='icon/left.png' width=55.5>
+                </a>
+            </div>
+            <div id="" class="section">
+                <div class="row">
+                    <div id="data_area">
+                        <!-- # -->
+                        <div class="data_col data_1col col s12 m4 l4 hide-on-med-and-up">
+                        </div>
+                        <div class="data_col data_3col col s12 m4 l4 hide-on-small-only">
+                        </div>
+                        <div class="data_col data_3col col s12 m4 l4 hide-on-small-only">
+                        </div>
+                        <div class="data_col data_3col col s12 m4 l4 hide-on-small-only">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- container end -->
+    <!-- footer -->
+    <footer class="footer-copyright">
+        <div class="container">
+            版权所有 &copy; 2016 清华大学学生职业发展协会
+        </div>
+    </footer>
+    <!-- footer end -->
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/coachdata.js"></script>
+    <script type="text/javascript" src="js/activitydata.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
