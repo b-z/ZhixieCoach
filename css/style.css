@@ -4,6 +4,8 @@
     font-weight: 400;
     src: local('Material Icons'), local('MaterialIcons-Regular'), url(../font/material-design-icons/Material-Design-Icons.woff2) format('woff2');
 }*/
+
+
 /*@font-face {
     font-family: 'Abel';
     font-style: normal;
@@ -11,6 +13,8 @@
     src: local('Abel'), local('Abel-Regular'), url(http://fonts.gstatic.com/s/abel/v6/UzN-iejR1VoXU2Oc-7LsbvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }*/
+
+
 /*.material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -24,8 +28,9 @@
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
 }*/
+
 body {
-    background-color: #F4F1F6!important;
+    background-color: whitesmoke!important;
     margin: 0;
     display: flex;
     min-height: 100vh;
@@ -38,15 +43,15 @@ body, html {
     /*font-family: 'Abel', sans-serif;*/
     color: #82318E;
 }
-.card-title span{
-    background-color: rgba(0,0,0, 0.5);
-    padding:5px;
+.card-title span {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
 }
 nav, .brand-logo {
     background-color: #ffffff!important;
     color: #82318E!important;
 }
-nav ul li:hover, nav ul li.active{
+nav ul li:hover, nav ul li.active {
     background-color: initial;
 }
 
@@ -54,6 +59,9 @@ nav ul li:hover, nav ul li.active{
 
 .input-field input[type=text]:focus + label {
     color: #b271be;
+}
+input {
+    color: black;
 }
 
 /* label underline focus color */
@@ -73,8 +81,8 @@ nav ul li:hover, nav ul li.active{
     background-color: #82318E!important;
     color: white !important;
 }
-.btn-thin{
-    padding:0 !important;
+.btn-thin {
+    padding: 0 !important;
 }
 a {
     color: #b271be!important;
@@ -101,28 +109,115 @@ a {
 .fixed-action-btn ul {
     position: initial;
 }
-
-#search{
+#search {
     padding-bottom: 0;
 }
-#search_area{
+#search_area {
     margin-bottom: 0;
 }
-.hide_content{
+.hide_content {
     display: none;
 }
-.gender{
-    float: right;
+.gender {
+    /*float: right;*/
     font-size: 32px;
     font-weight: bold;
+    /*margin-right: 1rem;*/
 }
-.indent{
+.indent {
     /*padding-left: 1.3em;*/
 }
-.secondary-content{
-    max-width: 30%;
+.secondary-content {
+    /*max-width: 30%;*/
     text-align: right;
 }
-.single_view .circle{
-    width:30%;
+.single_view .circle {
+    /*height: 100px;*/
+    width: 100px;
+}
+.single_view {
+    margin-left: -5.555555555%;
+    margin-right: -5.555555555%;
+}
+.coach_single_top {
+    text-align: center;
+    background-color: white;
+    margin-top: -2.8rem;
+    padding-top: 2.8rem;
+    color: black;
+}
+.activity_single_top {
+    text-align: center;
+    background-color: white;
+    margin-top: -2.8rem;
+    /*padding-top: 2.8rem;*/
+    color: black;
+}
+.coach_single_middle, .activity_single_middle {
+    height: 1em;
+    width: 100%;
+    background-color: #666;
+}
+.coach_single_bottom {
+    background-color: white;
+    min-height: 400px;
+    padding-top: 0.5rem;
+}
+.activity_single_bottom {
+    /*background-color: white;*/
+    /*min-height: 400px;*/
+    /*padding-top: 0.5rem;*/
+}
+.coach_title {}
+.coach_content {
+    color: black;
+}
+.activity_img {
+    width: 100%;
+}
+.caption {
+    opacity: 1!important;
+}
+.collapsible {
+    margin-top: 0rem;
+    border-left: 0;
+    border-right: 0;
+}
+.collapsible-header {
+    font-weight: bold;
+}
+.collapsible-body {
+    color: black;
+    background-color: #fafafa;
+}
+.caption h5 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+.slider .slides li .caption {
+    top: 70%;
+    left: 1rem;
+    width: initial;
+}
+.tab_activity {
+    position: absolute;
+    top: 58px;
+    width: 50%;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
+.tab_activity .tabs {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 36px;
+}
+.indicator {
+    background-color: #82318E!important;
+}
+.tab {
+    height: 36px!important;
+    line-height: 36px!important;
+}
+.tab a {
+    color: #82318E!important;
 }

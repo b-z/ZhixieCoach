@@ -6,8 +6,7 @@
     <title></title>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -38,18 +37,18 @@
                     </div>
                     <div id="search_area" class="row" style="display:none;">
                         <div class="col s12 m8 l8 offset-m2 offset-l2">
-                            <div>
+                            <form action="#">
                                 <div class="file-field input-field">
                                     <div class="input-field col s9 left" style="margin-top:0;">
-                                        <input id="search_input" type="text" class="validate">
-                                        <label for="search_input">输入想要查询的内容</label>
+                                        <input id="last_name" type="text" class="validate">
+                                        <label for="last_name">输入想要查询的内容</label>
                                     </div>
-                                    <div id="search_confirm" onclick="search();" class="btn waves-effect waves-light col s2 right btn-thin">
+                                    <div id="search_confirm" class="btn waves-effect waves-light col s2 right btn-thin">
                                         <!-- <i class="material-icons">search</i> -->
                                         <img src='icon/search.png' height=42>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -60,10 +59,10 @@
                 </a>
             </div>
             <div id="" class="section" style="margin-bottom:0;">
-                <div class="tab_activity">
+                <div class="tab_activity z-depth-1">
                     <ul class="tabs">
-                        <li class="tab col s3"><a class="active">小组活动</a></li>
-                        <li class="tab col s3"><a>活动环节</a></li>
+                        <li class="tab col s3"><a class="active" onclick="openActivityPanel(0);">小组活动</a></li>
+                        <li class="tab col s3"><a onclick="openActivityPanel(1);">活动环节</a></li>
                     </ul>
                 </div>
                 <div class="row" style="margin-bottom:0;">
@@ -92,38 +91,7 @@
 
     <!-- footer end -->
     <script>
-        var page = 'coach';
-
-        function check_search(item, txt) {
-            txt = txt.replace('\n','');
-            console.log(txt);
-            var strs = [item.name, item.organization, item.position];
-            var ret = false;
-            strs.forEach(function(e, i) {
-                if (e.indexOf(txt) >= 0) {
-                    ret = true;
-                }
-            });
-            return ret;
-        }
-        var coachdata_search = [];
-
-        function search() {
-            clearTimeout(timer);
-            var txt = $('#search_input').val();
-            // console.log(txt);
-            status='search';
-            coachdata_search = [];
-            coachdata.forEach(function(e, i) {
-                if (check_search(e, txt)) {
-                    coachdata_search.push(e);
-                }
-            });
-            console.log(coachdata_search);
-            $('.data_col').html('');
-            // for (var i = 0; i < coachdata_search.length; i++)
-                addCard('coach', coachdata_search, 0, 'search');
-        }
+        var page = 'activity';
     </script>
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
